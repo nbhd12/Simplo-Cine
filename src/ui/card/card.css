@@ -1,0 +1,64 @@
+
+.netflixCard {
+  width:180px;
+  border-radius: 5px;
+  background-color: #0a0a0a;
+  overflow: hidden;
+  margin: 0 10px;
+  transition: transform 0.3s ease, height 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageCard {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 5px 5px;
+  object-fit: cover;
+}
+
+
+.details {
+  padding: 10px;
+  color: #fff;
+  display: none;
+  flex-direction: column;
+  font-family: 'Nunito Sans';
+  font-size: 14px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+
+.details h2 {
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+}
+
+.details p {
+  font-size: 14px;
+  color: #ccc;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+@media (hover: hover) {
+  .netflixCard:hover {
+    transform: scale(1.05); 
+    border:.5px solid #ccc;
+  }
+
+  .imageCard{
+    border-radius: 5px 5px 0 0;
+  }
+
+  .netflixCard:hover .details {
+    max-height: 200px; 
+    display: block;
+  }
+}

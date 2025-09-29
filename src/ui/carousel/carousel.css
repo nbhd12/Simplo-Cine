@@ -1,0 +1,11 @@
+.carousel{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.Heading{
+    font-size: 23px;
+    color: white;
+    font-family: 'Nunito Sans';
+}
