@@ -1,0 +1,10 @@
+.pageDisplay{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.pageDisplay h2{
+    color: aliceblue;
+    font-family: 'Nunito Sans';
+}

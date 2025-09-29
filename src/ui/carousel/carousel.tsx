@@ -10,7 +10,7 @@ interface CarouselProps {
 
 const CardCarousel = ( {movies}: CarouselProps) => {
     return (
-        <div><p className="Heading"> Trending Movies</p>
+        <div>
         <ul className="carousel">
             {movies.map((movie, index) => (
                 <li key={`movie-list-item-${index}`}>

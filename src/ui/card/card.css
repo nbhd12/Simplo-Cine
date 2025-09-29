@@ -9,6 +9,7 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .imageCard {
@@ -31,7 +32,7 @@
 }
 
 
-.details h2 {
+.details h3 {
   font-weight: 600;
   font-size: 14px;
   margin: 0;
@@ -51,6 +52,8 @@
   .netflixCard:hover {
     transform: scale(1.05); 
     border:.5px solid #ccc;
+    z-index: 10;
+    position: relative;
   }
 
   .imageCard{
