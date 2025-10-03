@@ -3,7 +3,7 @@ import type { MovieDetail, ShowDetail, CreditsResponse, CastMember, Movie, Shows
 
 
 export const useFetchMovieDetails = (movieId: string) => {
- const {data, loading, error, ErrorMsg} = useFetch <MovieDetail> (`{/movie/${movieId}`);
+ const {data, loading, error, ErrorMsg} = useFetch <MovieDetail> (`/movie/${movieId}`);
  return {movieDetails: data, loading, error, ErrorMsg};
 };
 
