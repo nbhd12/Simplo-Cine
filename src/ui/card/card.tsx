@@ -10,7 +10,7 @@ interface CardProps {
   details?: string;
 }
 
-const Card = ({ id, type, title, image, vote_average, details }: CardProps) => {
+const Card = ({ id, type, title, image, vote_average }: CardProps) => {
   return (
     <Link to={`/${type}/${id}`} className="netflixCard">
       <img src={image} alt={`${title}-poster`} className="imageCard" />

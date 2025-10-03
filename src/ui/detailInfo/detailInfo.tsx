@@ -33,8 +33,7 @@ const DetailInfo = ({
       <div className="detailMeta">
         <span className="metaItem">{year}</span>
         <span className="metaItem">{parentalRating}</span>
-        <span className="metaItem">
-          {numberOfSeasons}Season{numberOfSeasons > 1 ? "s" : ""}
+        <span className="metaItem"> {numberOfSeasons ?? 0}Season{(numberOfSeasons ?? 0)> 1 ? "s" : ""}
         </span>
         <span className="metaItem">{numberOfEpisodes} Episodes</span>
         <span className="metaItem rating">{voteAverage}</span>
