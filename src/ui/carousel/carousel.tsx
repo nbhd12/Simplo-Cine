@@ -1,20 +1,24 @@
 import Card from "../card/card";
 import "./carousel.css"
 import type { Movie } from "../../types/CoreTypes";
+import type { Shows } from "../../types/CoreTypes";
 
 interface CarouselProps {
-    movies: Movie[];
+    movies: Movie[] | Shows[];
+    type: "movie"| "show";
 }
 
 
 
-const CardCarousel = ( {movies}: CarouselProps) => {
+const CardCarousel = ( {movies,type}: CarouselProps) => {
     return (
         <div>
         <ul className="carousel">
-            {movies.map((movie, index) => (
-                <li key={`movie-list-item-${index}`}>
+            {movies.map((movie) => (
+                <li key={movie.id}>
                     <Card
+                    id={movie.id}
+                    type={type}
                     title= {movie.title}
                     image={movie.image}
                     vote_average={movie.vote_average}

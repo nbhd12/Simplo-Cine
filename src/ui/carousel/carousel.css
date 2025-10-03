@@ -1,11 +1,29 @@
-.carousel{
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
+.carousel {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  overflow-x: auto;    
+  overflow-y: hidden;
+  scroll-behavior: smooth; 
+  -webkit-overflow-scrolling: touch; 
 }
 
-.Heading{
-    font-size: 23px;
-    color: white;
-    font-family: 'Nunito Sans';
+.carousel li {
+  flex: 0 0 auto;
+  width: 180px;
+}
+
+
+.carousel::-webkit-scrollbar {
+  height: 4px;
+}
+.carousel::-webkit-scrollbar-thumb {
+  background: #212121;
+  border-radius: 4px;
+}
+.carousel::-webkit-scrollbar-thumb:hover {
+  background: #830000;
 }

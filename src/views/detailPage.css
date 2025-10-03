@@ -1,0 +1,38 @@
+.detail-page {
+    min-height: 100vh;
+    background: #000;
+    color: #fff;
+    font-family: 'Nunito Sans';
+}
+
+.cast-section, .recommendations-section {
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    
+}
+
+.cast-section h2, .recommendations-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.cast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    
+}
+
+@media (max-width: 768px) {
+    .cast-grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+a{
+    text-decoration: none;
+}

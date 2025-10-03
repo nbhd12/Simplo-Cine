@@ -1,0 +1,80 @@
+
+.castPage {
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    color: #fff;
+    font-family: 'Nunito Sans';
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.castHeader {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.cast-photo {
+    width: 150px;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.castInfo {
+    flex: 1;
+    gap: 20px;
+}
+
+.cast-info h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+
+.cast-meta strong {
+    color: #fff;
+    margin-right: 10px;
+}
+
+
+.loading, .error {
+    text-align: center;
+    padding: 100px 20px;
+    font-size: 24px;
+}
+
+.error {
+    color: #ff4444;
+}
+
+@media (max-width: 768px) {
+    .castPage {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .castHeader {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .castHeader img {
+        width: 150px;
+        height: auto;
+    }
+
+    .castInfo h1 {
+        font-size: 28px;
+    }
+
+    .castInfo p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
