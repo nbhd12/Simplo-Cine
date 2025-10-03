@@ -22,7 +22,7 @@ export const useFetch = <T>(path: string) => {
         const apiKey = import.meta.env.VITE_TMDB_API_KEY;
 
         const separator = path.includes("?") ? "&" : "?";
-        const url = `${baseUrl}${path}${separator}api_key=${apiKey}&language=en-US`;
+        const url = `${baseUrl}${path}${separator}api_key=${apiKey}`;
         // console.log("Fetching:", url);
         const response = await fetch(url, {
           headers: {

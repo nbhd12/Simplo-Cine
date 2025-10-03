@@ -1,31 +1,33 @@
 import CardCarousel from "../ui/carousel/carousel";
-import { useFetchPopularMovies } from "../hooks/UseFetchMovies";
-import { useFetchUpcomingMovies } from "../hooks/UseFetchMovies";
-import { useFetchBestRated } from "../hooks/UseFetchMovies";
+import { useFetchTopRated, useFetchAnimePopular } from "../hooks/SeriesHook"; 
+import { useFetchMarvel, useFetchDC } from "../hooks/MovieHook";
 import "./homePage.css";
 
 
 
 const Homepage = () => {
-  const { movies:popular,  loading:loadingPopular, error:errorPopular } = useFetchPopularMovies();
-  const { movies:BestRated, loading: loadingBestRated, error: errorBestRated } = useFetchBestRated();
-  const { movies:upcoming,  loading:loadingUpcoming, error:errorUpcoming } = useFetchUpcomingMovies();
+  const { shows:topRated, loading: loadingTopRated, error:errorTopRated} = useFetchTopRated();
+  const { shows:animePopular, loading: loadinganimePopular, error:erroranimePopular} = useFetchAnimePopular();
+  const { movies:marvel,  loading:loadingmarvel, error:errormarvel } = useFetchMarvel();
+  const { movies:dc,  loading:loadingdc, error:errordc } = useFetchDC();
+ 
 
-
-
-  if (loadingPopular || loadingBestRated || loadingUpcoming ) return <p>Loading...</p>;
-  if (errorPopular || errorBestRated || errorUpcoming) return <p>Error loading titles</p>;
+  if (loadingTopRated || loadinganimePopular || loadingmarvel || loadingdc ) return <p>Loading...</p>;
+  if (errorTopRated || erroranimePopular || errormarvel || errordc) return <p>Error loading titles</p>;
 
   return (
     <div className="pageDisplay">
-    <h2>Popular Movies</h2>
-    <CardCarousel movies={popular} />;
+    <h2>Top Rated Shows</h2>
+    <CardCarousel movies={topRated} type="show" />;
 
-    <h2>Best Rated Movies</h2>
-    <CardCarousel movies={BestRated} />;
+    <h2>The Marvel Series</h2>
+    <CardCarousel movies={marvel} type="movie" />;
 
-    <h2>Upcoming Movies</h2>
-    <CardCarousel movies={upcoming} />;
+    <h2>Anime Popular Shows</h2>
+    <CardCarousel movies={animePopular} type="show" />;
+
+    <h2>DC Universe Movies</h2>
+    <CardCarousel movies={dc}  type="movie"/>;
     </div>
 )
 };
